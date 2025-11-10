@@ -63,7 +63,7 @@ def map_search():
                 },
             }
             headers_nearby_places = {
-                'X-Goog-Api-Key': 'AIzaSyCeZX5CzEM17UxbVDhGRXwdvJ6uu0cpYh0',
+                'X-Goog-Api-Key': 'GOOGLE_API_KEY',
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'X-Goog-FieldMask': 'places.displayName,places.formattedAddress,places.location,places.addressDescriptor'
