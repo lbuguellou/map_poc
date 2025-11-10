@@ -16,7 +16,7 @@ import json
 # - Check/Use FastAPI
 # - Check/Use pytest/logging
 # - Check/Use Django
-# - Send to Github
+# - Add a readme
 
 
 geolocator = Nominatim(user_agent="MAP")
