@@ -1,0 +1,15 @@
+services:
+  web:
+    build: 
+      context: context/python
+    volumes:
+      - ../map-python:/var/www/app.map:cached
+    ports:
+      - 80:80
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:5.0.9
+    ports:
+      - 6379:6379
