@@ -6,9 +6,10 @@ import requests
 import pandas as pd
 import redis
 import json
+from dotenv import load_dotenv
+import os
 
 
-# - Use env variables 
 # - Clean code
 # - Call IA to get some infos on cities
 # - Defined criterias with notation
@@ -18,9 +19,11 @@ import json
 # - Check/Use Django
 # - Add a readme
 
+# Load variables from .env file
+load_dotenv()
 
 geolocator = Nominatim(user_agent="MAP")
-redis_instance = redis.Redis(host='redis', port=6379, decode_responses=True)
+redis_instance = redis.Redis(host=os.getenv("REDIS_HOST"), port=os.getenv("REDIS_PORT"), decode_responses=True)
 
 def map_search():
     # Get coordinates for a location
@@ -44,7 +47,7 @@ def map_search():
             st.session_state["places_from_cache"] = True
         else :
             #Get nearby places for coordinates and distance from cache or api google
-            url_nearby_places = "https://places.googleapis.com/v1/places:searchNearby"
+            url_nearby_places = os.getenv("GOOGLE_NEARBY_PLACES_URL")
             data_nearby_places = {
                 "includedPrimaryTypes":["locality"],
                 "maxResultCount": st.session_state['nb_results'],
@@ -63,7 +66,7 @@ def map_search():
                 },
             }
             headers_nearby_places = {
-                'X-Goog-Api-Key': 'GOOGLE_API_KEY',
+                'X-Goog-Api-Key': os.getenv("GOOGLE_API_KEY"),
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'X-Goog-FieldMask': 'places.displayName,places.formattedAddress,places.location,places.addressDescriptor'
@@ -148,4 +151,4 @@ if "data_cities" in st.session_state:
         'longitude' : st.column_config.NumberColumn('Longitude')
     }
     df = pd.DataFrame(data=st.session_state["data_cities"], columns=['name', 'latitude', 'longitude'])
-    st.dataframe(df, use_container_width=True, hide_index=True, column_config=config)
+    st.dataframe(df, width='stretch', hide_index=True, column_config=config)
