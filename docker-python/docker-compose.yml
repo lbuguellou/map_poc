@@ -1,13 +1,21 @@
 services:
   web:
     build: 
-      context: context/python
+      context: context/streamlit
     volumes:
-      - ../map-python:/var/www/app.map:cached
+      - ../map-streamlit:/var/www/map.streamlit:cached
     ports:
       - 80:80
     depends_on:
       - redis
+
+  api:
+    build: 
+      context: context/fastapi
+    volumes:
+      - ../map-fastapi:/var/www/map.fastapi:cached
+    ports:
+      - 81:81
 
   redis:
     image: redis:5.0.9

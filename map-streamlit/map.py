@@ -8,20 +8,20 @@ import redis
 import json
 from dotenv import load_dotenv
 import os
+from openai import OpenAI
 
 
 # - Clean code
+# - Check/Use FastAPI
 # - Call IA to get some infos on cities
 # - Defined criterias with notation
 # - Calculed ponderation
-# - Check/Use FastAPI
 # - Check/Use pytest/logging
-# - Check/Use Django
-# - Add a readme
 
 # Load variables from .env file
 load_dotenv()
 
+#client_openai = OpenAI()
 geolocator = Nominatim(user_agent="MAP")
 redis_instance = redis.Redis(host=os.getenv("REDIS_HOST"), port=os.getenv("REDIS_PORT"), decode_responses=True)
 
@@ -152,3 +152,9 @@ if "data_cities" in st.session_state:
     }
     df = pd.DataFrame(data=st.session_state["data_cities"], columns=['name', 'latitude', 'longitude'])
     st.dataframe(df, width='stretch', hide_index=True, column_config=config)
+
+# response = client_openai.responses.create(
+#     model="gpt-5",
+#     input="Write a one-sentence bedtime story about a unicorn."
+# )
+# st.text(response.output_text)
