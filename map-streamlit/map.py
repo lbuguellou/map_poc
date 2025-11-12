@@ -7,8 +7,6 @@ import json
 from dotenv import load_dotenv
 import os
 
-
-# - Use redis
 # - Call IA to get some infos on cities
 # - Defined criterias with notation
 # - Calculed ponderation
