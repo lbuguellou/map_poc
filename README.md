@@ -23,7 +23,8 @@ Go to your gitlab profile and copy/paste your public key
 ```bash
 cd ~ && mkdir -p lab && cd lab
 git clone git@github.com:lbuguellou/map_poc.git
-cd map-python && cp .env.example .env
+cd map-streamlit && cp .env.example .env
+cd map-fastapi && cp .env.example .env
 ```
 notes:
 * Configure your .env to use local services like openai, google api...
@@ -34,6 +35,7 @@ Add those entries to your host file
 
 ```bash
 127.0.0.1 map.solutions
+127.0.0.1 api.solutions
 ```
 
 ## Run the container
@@ -46,12 +48,14 @@ notes:
 * Use the `--build --force-recreate` options to force the re-creation of the containers
 
 if needed:
-* Use `docker exec -it web bash` to access the container web (python)
+* Use `docker exec -it web bash` to access the container web (streamlit)
+* Use `docker exec -it web bash` to access the container web (fastapi)
 * Use `docker exec -it redis bash` to access the container redis
 
 
 ## Check the environment
-With your browser, go to `http://map.solutions/`
+With your browser, go to `http://map.solutions:80/`
+With your browser, go to `http://api.solutions:81/`
 
 Transfer errors to `laetitiabug@gmail.com` or update this doc if needed
 
