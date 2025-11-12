@@ -1,5 +1,5 @@
 services:
-  web:
+  map.solutions:
     build: 
       context: context/streamlit
     volumes:
@@ -7,9 +7,10 @@ services:
     ports:
       - 80:80
     depends_on:
+      - api.solutions
       - redis
 
-  api:
+  api.solutions:
     build: 
       context: context/fastapi
     volumes:

@@ -15,4 +15,4 @@ EXPOSE 81
 
 COPY . .
 
-ENTRYPOINT ["fastapi", "run", "main.py", "--port=81"]
+ENTRYPOINT ["fastapi", "run", "main.py", "--port=81", "--reload"]
