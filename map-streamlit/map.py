@@ -7,7 +7,10 @@ import json
 from dotenv import load_dotenv
 import os
 
-# - Check/Use pytest/logging
+# TODO
+# - Check/Use pytest
+# - Optimize openai call and get more infos
+# - Add error handling
 
 # Load variables from .env file
 load_dotenv()

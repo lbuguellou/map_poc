@@ -48,8 +48,8 @@ notes:
 * Use the `--build --force-recreate` options to force the re-creation of the containers
 
 if needed:
-* Use `docker exec -it web bash` to access the container web (streamlit)
-* Use `docker exec -it web bash` to access the container web (fastapi)
+* Use `docker exec -it map.solutions bash` to access the container web (streamlit)
+* Use `docker exec -it api.solutions bash` to access the container web (fastapi)
 * Use `docker exec -it redis bash` to access the container redis
 
 

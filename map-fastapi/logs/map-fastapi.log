@@ -1,0 +1,244 @@
+INFO:uvicorn.error:Started server process [31]
+INFO:uvicorn.error:Waiting for application startup.
+INFO:uvicorn.error:Application startup complete.
+INFO:main:Result geocode from Cache
+INFO:main:Result nearby_places from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result geocode from Cache
+INFO:main:Result nearby_places from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:main:Result city_infos from Cache
+INFO:uvicorn.error:Shutting down
+INFO:uvicorn.error:Waiting for application shutdown.
+INFO:uvicorn.error:Application shutdown complete.
+INFO:uvicorn.error:Finished server process [31]
+2025-11-12 17:17:08 INFO     Started server process [34]
+2025-11-12 17:17:08 INFO     Waiting for application startup.
+2025-11-12 17:17:08 INFO     Application startup complete.
+2025-11-12 17:17:38 INFO     Shutting down
+2025-11-12 17:17:38 INFO     Waiting for application shutdown.
+2025-11-12 17:17:38 INFO     Application shutdown complete.
+2025-11-12 17:17:38 INFO     Finished server process [34]
+2025-11-12 17:17:38 INFO     Started server process [35]
+2025-11-12 17:17:38 INFO     Waiting for application startup.
+2025-11-12 17:17:38 INFO     Application startup complete.
+2025-11-12 17:17:50 INFO     Result geocode from Cache
+2025-11-12 17:17:50 INFO     Result nearby_places from Cache
+2025-11-12 17:17:50 INFO     Result city_infos from Cache
+2025-11-12 17:17:50 INFO     Result city_infos from Cache
+2025-11-12 17:17:50 INFO     Result city_infos from Cache
+2025-11-12 17:17:50 INFO     Result city_infos from Cache
+2025-11-12 17:17:50 INFO     Result city_infos from Cache
+2025-11-12 17:17:50 INFO     Result city_infos from Cache
+2025-11-12 17:17:50 INFO     Result city_infos from Cache
+2025-11-12 17:17:50 INFO     Result city_infos from Cache
+2025-11-12 17:17:50 INFO     Result city_infos from Cache
+2025-11-12 17:17:50 INFO     Result city_infos from Cache
+2025-11-12 17:18:32 INFO     Shutting down
+2025-11-12 17:18:32 INFO     Waiting for application shutdown.
+2025-11-12 17:18:32 INFO     Application shutdown complete.
+2025-11-12 17:18:32 INFO     Finished server process [35]
+2025-11-12 17:18:33 INFO     Started server process [37]
+2025-11-12 17:18:33 INFO     Waiting for application startup.
+2025-11-12 17:18:33 INFO     Application startup complete.
+2025-11-12 17:18:35 INFO     Result geocode from Cache for city Bruz
+2025-11-12 17:18:35 INFO     Result nearby_places from Cache
+2025-11-12 17:18:35 INFO     Result city_infos from Cache
+2025-11-12 17:18:35 INFO     Result city_infos from Cache
+2025-11-12 17:18:35 INFO     Result city_infos from Cache
+2025-11-12 17:18:35 INFO     Result city_infos from Cache
+2025-11-12 17:18:35 INFO     Result city_infos from Cache
+2025-11-12 17:18:35 INFO     Result city_infos from Cache
+2025-11-12 17:18:35 INFO     Result city_infos from Cache
+2025-11-12 17:18:35 INFO     Result city_infos from Cache
+2025-11-12 17:18:35 INFO     Result city_infos from Cache
+2025-11-12 17:18:35 INFO     Result city_infos from Cache
+2025-11-12 17:19:58 INFO     Shutting down
+2025-11-12 17:19:58 INFO     Waiting for application shutdown.
+2025-11-12 17:19:58 INFO     Application shutdown complete.
+2025-11-12 17:19:58 INFO     Finished server process [37]
+2025-11-12 17:19:58 INFO     Started server process [39]
+2025-11-12 17:19:58 INFO     Waiting for application startup.
+2025-11-12 17:19:58 INFO     Application startup complete.
+2025-11-12 17:20:00 INFO     Result geocode from Cache for city Bruz
+2025-11-12 17:20:00 INFO     Result nearby_places from Cache for lat:48.0245814, lon:-1.7471629, radius:10, nb_results:10
+2025-11-12 17:20:00 INFO     Result city_infos from Cache
+2025-11-12 17:20:00 INFO     Result city_infos from Cache
+2025-11-12 17:20:00 INFO     Result city_infos from Cache
+2025-11-12 17:20:00 INFO     Result city_infos from Cache
+2025-11-12 17:20:00 INFO     Result city_infos from Cache
+2025-11-12 17:20:00 INFO     Result city_infos from Cache
+2025-11-12 17:20:00 INFO     Result city_infos from Cache
+2025-11-12 17:20:00 INFO     Result city_infos from Cache
+2025-11-12 17:20:00 INFO     Result city_infos from Cache
+2025-11-12 17:20:00 INFO     Result city_infos from Cache
+2025-11-12 17:20:39 INFO     Shutting down
+2025-11-12 17:20:39 INFO     Waiting for application shutdown.
+2025-11-12 17:20:39 INFO     Application shutdown complete.
+2025-11-12 17:20:39 INFO     Finished server process [39]
+2025-11-12 17:20:39 INFO     Started server process [41]
+2025-11-12 17:20:39 INFO     Waiting for application startup.
+2025-11-12 17:20:39 INFO     Application startup complete.
+2025-11-12 17:20:42 INFO     Result geocode from Cache for city Bruz
+2025-11-12 17:20:42 INFO     Result nearby_places from Cache for lat:48.0245814, lon:-1.7471629, radius:10, nb_results:10
+2025-11-12 17:20:42 INFO     Result city_infos from Cache for city 35170 Bruz, France
+2025-11-12 17:20:42 INFO     Result city_infos from Cache for city 35890 Laillé, France
+2025-11-12 17:20:42 INFO     Result city_infos from Cache for city 35580 Goven, France
+2025-11-12 17:20:42 INFO     Result city_infos from Cache for city 35310 Chavagne, France
+2025-11-12 17:20:42 INFO     Result city_infos from Cache for city Chartres-de-Bretagne, France
+2025-11-12 17:20:42 INFO     Result city_infos from Cache for city Pont-Péan, France
+2025-11-12 17:20:42 INFO     Result city_infos from Cache for city 35580 Guichen, France
+2025-11-12 17:20:42 INFO     Result city_infos from Cache for city Saint-Jacques-de-la-Lande, France
+2025-11-12 17:20:42 INFO     Result city_infos from Cache for city 35230 Noyal-Châtillon-sur-Seiche, France
+2025-11-12 17:20:42 INFO     Result city_infos from Cache for city 35230 Saint-Erblon, France
+2025-11-12 17:20:59 INFO     Shutting down
+2025-11-12 17:20:59 INFO     Waiting for application shutdown.
+2025-11-12 17:20:59 INFO     Application shutdown complete.
+2025-11-12 17:20:59 INFO     Finished server process [41]
+2025-11-12 17:20:59 INFO     Started server process [43]
+2025-11-12 17:20:59 INFO     Waiting for application startup.
+2025-11-12 17:20:59 INFO     Application startup complete.
+2025-11-12 17:21:02 INFO     Shutting down
+2025-11-12 17:21:02 INFO     Waiting for application shutdown.
+2025-11-12 17:21:02 INFO     Application shutdown complete.
+2025-11-12 17:21:02 INFO     Finished server process [43]
+2025-11-12 17:21:07 INFO     Will watch for changes in these directories: ['/var/www/map.fastapi']
+2025-11-12 17:21:07 INFO     Uvicorn running on http://0.0.0.0:81 (Press CTRL+C to quit)
+2025-11-12 17:21:07 INFO     Started reloader process [1] using WatchFiles
+2025-11-12 17:21:07 INFO     Started server process [8]
+2025-11-12 17:21:07 INFO     Waiting for application startup.
+2025-11-12 17:21:07 INFO     Application startup complete.
+2025-11-12 17:21:07 INFO     1 change detected
+2025-11-12 17:21:08 INFO     1 change detected
+2025-11-12 17:21:08 INFO     1 change detected
+2025-11-12 17:21:08 INFO     1 change detected
+2025-11-12 17:21:09 INFO     1 change detected
+2025-11-12 17:21:09 INFO     1 change detected
+2025-11-12 17:21:10 INFO     1 change detected
+2025-11-12 17:21:10 INFO     1 change detected
+2025-11-12 17:21:10 INFO     1 change detected
+2025-11-12 17:21:11 INFO     1 change detected
+2025-11-12 17:21:11 INFO     1 change detected
+2025-11-12 17:21:11 INFO     1 change detected
+2025-11-12 17:21:12 INFO     1 change detected
+2025-11-12 17:21:12 INFO     1 change detected
+2025-11-12 17:21:12 INFO     Result geocode from Cache for city Bruz
+2025-11-12 17:21:12 INFO     Result nearby_places from Cache for lat:48.0245814, lon:-1.7471629, radius:10, nb_results:10
+2025-11-12 17:21:12 INFO     Result city_infos from Cache for city 35170 Bruz, France
+2025-11-12 17:21:12 INFO     Result city_infos from Cache for city 35890 Laillé, France
+2025-11-12 17:21:12 INFO     Result city_infos from Cache for city 35580 Goven, France
+2025-11-12 17:21:12 INFO     Result city_infos from Cache for city 35310 Chavagne, France
+2025-11-12 17:21:12 INFO     Result city_infos from Cache for city Chartres-de-Bretagne, France
+2025-11-12 17:21:12 INFO     Result city_infos from Cache for city Pont-Péan, France
+2025-11-12 17:21:12 INFO     1 change detected
+2025-11-12 17:21:12 INFO     Result city_infos from Cache for city 35580 Guichen, France
+2025-11-12 17:21:12 INFO     Result city_infos from Cache for city Saint-Jacques-de-la-Lande, France
+2025-11-12 17:21:12 INFO     Result city_infos from Cache for city 35230 Noyal-Châtillon-sur-Seiche, France
+2025-11-12 17:21:12 INFO     Result city_infos from Cache for city 35230 Saint-Erblon, France
+2025-11-12 17:21:13 INFO     1 change detected
+2025-11-12 17:21:13 INFO     1 change detected
+2025-11-12 17:21:14 INFO     1 change detected
+2025-11-12 17:21:14 INFO     1 change detected
+2025-11-12 17:21:14 INFO     1 change detected
+2025-11-12 17:21:15 INFO     1 change detected
+2025-11-12 17:21:15 INFO     1 change detected
+2025-11-12 17:21:15 INFO     1 change detected
+2025-11-12 17:21:16 INFO     1 change detected
+2025-11-12 17:21:16 INFO     1 change detected
+2025-11-12 17:21:16 INFO     1 change detected
+2025-11-12 17:21:17 INFO     1 change detected
+2025-11-12 17:21:17 INFO     1 change detected
+2025-11-12 17:21:18 INFO     1 change detected
+2025-11-12 17:21:18 INFO     1 change detected
+2025-11-12 17:21:18 INFO     1 change detected
+2025-11-12 17:21:19 INFO     1 change detected
+2025-11-12 17:21:19 INFO     1 change detected
+2025-11-12 17:21:19 INFO     1 change detected
+2025-11-12 17:21:20 INFO     1 change detected
+2025-11-12 17:21:20 INFO     1 change detected
+2025-11-12 17:21:20 INFO     1 change detected
+2025-11-12 17:21:21 INFO     1 change detected
+2025-11-12 17:21:21 INFO     1 change detected
+2025-11-12 17:21:21 INFO     1 change detected
+2025-11-12 17:21:22 INFO     1 change detected
+2025-11-12 17:21:22 INFO     1 change detected
+2025-11-12 17:21:23 INFO     1 change detected
+2025-11-12 17:21:23 INFO     1 change detected
+2025-11-12 17:21:23 INFO     1 change detected
+2025-11-12 17:21:24 INFO     1 change detected
+2025-11-12 17:21:24 INFO     1 change detected
+2025-11-12 17:21:24 INFO     1 change detected
+2025-11-12 17:21:25 INFO     1 change detected
+2025-11-12 17:21:25 INFO     1 change detected
+2025-11-12 17:21:25 INFO     1 change detected
+2025-11-12 17:21:26 INFO     1 change detected
+2025-11-12 17:21:26 INFO     1 change detected
+2025-11-12 17:21:27 INFO     1 change detected
+2025-11-12 17:21:27 INFO     1 change detected
+2025-11-12 17:21:27 INFO     1 change detected
+2025-11-12 17:21:28 INFO     1 change detected
+2025-11-12 17:21:28 INFO     1 change detected
+2025-11-12 17:21:28 INFO     1 change detected
+2025-11-12 17:21:29 INFO     1 change detected
+2025-11-12 17:21:29 INFO     1 change detected
+2025-11-12 17:21:29 INFO     1 change detected
+2025-11-12 17:21:30 INFO     1 change detected
+2025-11-12 17:21:30 INFO     1 change detected
+2025-11-12 17:21:31 INFO     1 change detected
+2025-11-12 17:21:31 INFO     1 change detected
+2025-11-12 17:21:31 INFO     1 change detected
+2025-11-12 17:21:32 INFO     1 change detected
+2025-11-12 17:21:32 INFO     1 change detected
+2025-11-12 17:21:32 INFO     1 change detected
+2025-11-12 17:21:33 INFO     1 change detected
+2025-11-12 17:21:33 INFO     1 change detected
+2025-11-12 17:21:33 INFO     1 change detected
+2025-11-12 17:21:34 INFO     1 change detected
+2025-11-12 17:21:34 INFO     1 change detected
+2025-11-12 17:21:35 INFO     1 change detected
+2025-11-12 17:21:35 INFO     1 change detected
+2025-11-12 17:21:35 INFO     1 change detected
+2025-11-12 17:21:36 INFO     1 change detected
+2025-11-12 17:21:36 INFO     1 change detected
+2025-11-12 17:21:36 INFO     1 change detected
+2025-11-12 17:21:37 INFO     1 change detected
+2025-11-12 17:21:37 INFO     1 change detected
+2025-11-12 17:21:37 INFO     1 change detected
+2025-11-12 17:21:38 INFO     1 change detected
+2025-11-12 17:21:38 INFO     1 change detected
+2025-11-12 17:21:39 INFO     1 change detected
+2025-11-12 17:21:39 INFO     1 change detected
+2025-11-12 17:21:39 INFO     1 change detected
+2025-11-12 17:21:40 INFO     1 change detected
+2025-11-12 17:21:40 INFO     1 change detected
+2025-11-12 17:21:40 INFO     1 change detected
+2025-11-12 17:21:41 INFO     1 change detected
+2025-11-12 17:21:41 INFO     1 change detected
+2025-11-12 17:21:41 INFO     1 change detected
+2025-11-12 17:21:42 INFO     1 change detected
+2025-11-12 17:21:42 INFO     1 change detected
+2025-11-12 17:21:42 INFO     1 change detected
+2025-11-12 17:21:43 INFO     1 change detected
+2025-11-12 17:21:43 INFO     1 change detected
+2025-11-12 17:21:44 INFO     1 change detected
+2025-11-12 17:21:44 INFO     1 change detected
+2025-11-12 17:21:44 INFO     1 change detected
+2025-11-12 17:21:45 INFO     1 change detected
+2025-11-12 17:21:45 INFO     1 change detected
+2025-11-12 17:21:45 INFO     1 change detected
+2025-11-12 17:21:46 INFO     1 change detected
+2025-11-12 17:21:46 INFO     1 change detected
