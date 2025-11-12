@@ -110,7 +110,7 @@ def nearby_places(latitude: float, longitude: float, radius: int, nb_results: in
 @app.get("/city_infos/{city}")
 def city_infos(city:str):
 
-    redis_key_infos = f"city_infos_{city}"
+    redis_key_infos = f"infos_{city}"
 
     response_infos = redis_instance.get(redis_key_infos)
 
@@ -119,23 +119,32 @@ def city_infos(city:str):
     else: 
         client_openai = OpenAI()
 
+    # DO:
+    # - Get people number
+    # - Get average of noise pollution
+    # - Get list of schools by ages (maternelles, primaires, collèges, lycées, études supérieures)
+
+    # GUIDELINES:
+    # - Return response with a json key:value like {"people_number": 12000, "noise_pollution": 30, "schools": [{"primaires": [{"name": "école A", "type":"privée"}, {"name": "école B", "type":"publique"}]}]}
+    # - Get Values of json in french
+    
         system_message = """
     You are a professional researcher 
 
     DO:
     - Get people number
-    - Get list of schools by ages (maternelles, primaires, collèges, lycées, études supérieures)
+    - Get average of noise pollution
 
     GUIDELINES:
-    - Return response with a json key:value like {"people_number": 12000, "schools": [{"primaires": [{"name": "école A", "type":"privée"}, {"name": "école B", "type":"publique"}]}]}
-    - Get Values of json in french
+    - Return response with a json key:value like {"people_number": 12000, "noise_pollution": 30}
+    - Get values of people number and noise pollution in integer or float
 
     """
 
         response = client_openai.responses.create(
             model="gpt-5",
             tools=[{"type": "web_search"}],
-            reasoning={"effort": "medium"},
+            reasoning={"effort": "low"},
             instructions=system_message,
             input=f"Get informations of {city}"
         )

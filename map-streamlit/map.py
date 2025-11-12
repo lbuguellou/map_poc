@@ -30,6 +30,16 @@ def map_search():
         response_places = requests.get(f"{os.getenv('API_URL')}/nearby_places/?latitude={st.session_state['latitude']}&longitude={st.session_state['longitude']}&radius={st.session_state['radius']}&nb_results={st.session_state['nb_results']}")
         st.session_state["nearby_places"] = response_places.json()
 
+        if "nearby_places" in st.session_state :
+            for city_item in st.session_state["nearby_places"]:
+                # Get infos for a city
+                response_infos = requests.get(f"{os.getenv('API_URL')}/city_infos/{city_item['address']}")
+                infos = response_infos.json()
+                if "people_number" in infos:
+                    city_item["people_number"] = infos["people_number"]
+                if "noise_pollution" in infos:
+                    city_item["noise_pollution"] = infos["noise_pollution"]
+
 
 st.set_page_config(page_title="MAP", layout="wide")
 st.title("Résultats")
@@ -78,9 +88,11 @@ if "nearby_places" in st.session_state :
     config = {
         "locality" : st.column_config.TextColumn("Nom", width="large"),
         "latitude" : st.column_config.NumberColumn("Latitude"),
-        "longitude" : st.column_config.NumberColumn("Longitude")
+        "longitude" : st.column_config.NumberColumn("Longitude"),
+        "people_number" : st.column_config.NumberColumn("Nb Habitants"),
+        "noise_pollution" : st.column_config.NumberColumn("Nuisance sonore")
     }
-    df = pd.DataFrame(data=st.session_state["nearby_places"], columns=["locality", "latitude", "longitude"])
+    df = pd.DataFrame(data=st.session_state["nearby_places"], columns=["locality", "latitude", "longitude", "people_number", "noise_pollution"])
     st.dataframe(df, width="stretch", hide_index=True, column_config=config)
 
 
