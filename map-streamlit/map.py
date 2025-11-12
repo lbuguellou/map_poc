@@ -7,9 +7,6 @@ import json
 from dotenv import load_dotenv
 import os
 
-# - Call IA to get some infos on cities
-# - Defined criterias with notation
-# - Calculed ponderation
 # - Check/Use pytest/logging
 
 # Load variables from .env file

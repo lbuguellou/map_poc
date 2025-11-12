@@ -109,9 +109,38 @@ def nearby_places(latitude: float, longitude: float, radius: int, nb_results: in
 #def city_infos (openai) with cache
 @app.get("/city_infos/{city}")
 def city_infos(city:str):
-    client_openai = OpenAI()
-    response = client_openai.responses.create(
-        model="gpt-5",
-        input="Get people number of {city}"
-    )
-    return response.output_text
+
+    redis_key_infos = f"city_infos_{city}"
+
+    response_infos = redis_instance.get(redis_key_infos)
+
+    if response_infos:
+        response_infos = json.loads(response_infos)
+    else: 
+        client_openai = OpenAI()
+
+        system_message = """
+    You are a professional researcher 
+
+    DO:
+    - Get people number
+    - Get list of schools by ages (maternelles, primaires, collèges, lycées, études supérieures)
+
+    GUIDELINES:
+    - Return response with a json key:value like {"people_number": 12000, "schools": [{"primaires": [{"name": "école A", "type":"privée"}, {"name": "école B", "type":"publique"}]}]}
+    - Get Values of json in french
+
+    """
+
+        response = client_openai.responses.create(
+            model="gpt-5",
+            tools=[{"type": "web_search"}],
+            reasoning={"effort": "medium"},
+            instructions=system_message,
+            input=f"Get informations of {city}"
+        )
+
+        redis_instance.set(redis_key_infos, response.output_text)
+        response_infos = json.loads(response.output_text)
+
+    return response_infos
