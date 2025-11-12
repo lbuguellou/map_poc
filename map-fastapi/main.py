@@ -20,9 +20,11 @@ def geocode(city:str) -> Address:
     geolocator = Nominatim(user_agent="MAP")
     location = geolocator.geocode(city)
     return Address(
+        locality = city,
         address = location.address,
         latitude = location.latitude,
-        longitude = location.longitude
+        longitude = location.longitude,
+        infos = location.raw
     )
 
 
@@ -67,9 +69,11 @@ def nearby_places(latitude: float, longitude: float, radius: int, nb_results: in
             for place in response_places:
                 places.append(
                     Address(
-                        address = place["displayName"]["text"],
+                        locality = place["displayName"]["text"],
+                        address = place["formattedAddress"],
                         latitude = place["location"]["latitude"],
-                        longitude = place["location"]["longitude"]
+                        longitude = place["location"]["longitude"],
+                        infos = place
                     )
                 )
 
