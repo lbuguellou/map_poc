@@ -17,6 +17,8 @@ services:
       - ../map-fastapi:/var/www/map.fastapi:cached
     ports:
       - 81:81
+    depends_on:
+      - redis
 
   redis:
     image: redis:5.0.9

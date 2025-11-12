@@ -5,26 +5,44 @@ from dotenv import load_dotenv
 import os
 import json
 import requests 
+import redis
 from openai import OpenAI
 
 # Load variables from .env file
 load_dotenv()
 
 app = FastAPI()
+redis_instance = redis.Redis(host=os.getenv("REDIS_HOST"), port=os.getenv("REDIS_PORT"), decode_responses=True)
 
 #def geocode (nominatim) with cache
 @app.get("/geocode/{city}")
-def geocode(city:str) -> Address:
+def geocode(city:str):
+    
+    redis_key_geocode = f"geocode_{city}"
 
-    # Get coordinates for a location
-    geolocator = Nominatim(user_agent="MAP")
-    location = geolocator.geocode(city)
+    address = redis_instance.get(redis_key_geocode)
+
+    if address:
+        address = json.loads(address)
+    else: 
+        # Get coordinates for a location
+        geolocator = Nominatim(user_agent="MAP")
+        location = geolocator.geocode(city)
+        address = {
+            "locality": city,
+            "address": location.address,
+            "latitude": location.latitude,
+            "longitude": location.longitude,
+            "infos": location.raw
+        }
+        redis_instance.set(redis_key_geocode, json.dumps(address))
+        
     return Address(
-        locality = city,
-        address = location.address,
-        latitude = location.latitude,
-        longitude = location.longitude,
-        infos = location.raw
+        locality = address["locality"],
+        address = address["address"],
+        latitude = address["latitude"],
+        longitude = address["longitude"],
+        infos = address["infos"]
     )
 
 
